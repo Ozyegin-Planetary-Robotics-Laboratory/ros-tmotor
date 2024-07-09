@@ -117,7 +117,7 @@ private:
 };
 
 int main(int argc, char** argv) {
-  ros::init(argc, argv, "tmotor_node");
+  ros::init(argc, argv, "tmotor_node", ros::init_options::NoSigintHandler);
   int id;
   ros::param::get("~id", id);
   ROS_INFO("AK motor node started with id %d", id);
